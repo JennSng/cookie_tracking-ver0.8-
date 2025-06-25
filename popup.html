@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>서드파티 쿠키 탐지</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; width: 750px; height: 682px;}
+    h2 { margin-top: 30px; font-size: 16px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; font-size: 13px; }
+    th { background-color: #f0f0f0; }
+  </style>
+</head>
+<body>
+<button id="openAllCookies" style="position:absolute;top:12px;left:12px;z-index:10;">전체 쿠키 리스트</button>
+
+  </table>
+  <h2>새로 저장된 쿠키 (Set-Cookie)</h2>
+  <table>
+    <thead>
+      <tr><th>목적</th><th>도메인</th><th>도메인 신뢰도</th><th>활용도</th><th>보안</th><th>만료일</th><th>차단</th></tr>
+    </thead>
+    <tbody id="setCookies"></tbody>
+  </table>
+  
+  <h2>활용된 My 쿠키 (Cookie Header)</h2>
+  <table>
+    <thead>
+      <tr><th>목적</th><th>도메인</th><th>도메인 신뢰도</th><th>활용도</th><th>보안</th><th>만료일</th><th>차단</th></tr>
+    </thead>
+    <tbody id="cookieHeaderTable">
+      <tr><td colspan="5">로딩 중...</td></tr>
+    </tbody>
+
+  <script src="popup.js"></script>
+
+  <table>
+    <h2>차단된 쿠키 목록</h2>
+    <thead>
+      <tr><th>목적</th><th>도메인</th><th>도메인 신뢰도</th><th>활용도</th><th>보안</th><th>만료일</th><th>해제</th></tr>
+    </thead>
+    <tbody id="blockedCookiesTable">
+      <tr><td colspan="3">차단된 쿠키가 없습니다.</td></tr>
+    </tbody>
+  </table>
+</body>
+</html>
